@@ -19,6 +19,7 @@ h1 {
 
 img {
     margin-left: 15%;
+    max-height: 300px;
 }
 
 #card-home {
@@ -63,4 +64,8 @@ button:hover {
 
 #shi {
     cursor: pointer;
+    transition: all 0.3s ease;
+    transform-origin: center;
+    display: inline-block;
 }
+
