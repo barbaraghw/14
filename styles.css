@@ -1,5 +1,66 @@
+body {
+    height: 100vh;
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 h1 {
-    color:blueviolet;
+    text-align: center;
+    color:#AA0000ff;
     font-size: 40px;
-    
+    margin: auto;
+    margin: 20px;
+}
+
+img {
+    margin-left: 15%;
+}
+
+#card-home {
+    position: absolute;
+    top: 50%;        
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    height: 30vw;
+    width: 30%;
+    padding: 20px;
+
+    border: 5px solid #D40000ff;
+    border-radius: 10px;
+    background-color: #FFAAAAff;
+    margin: auto;
+    display: table;
+}
+
+.container-buttons {
+   position: absolute;
+    bottom: auto;           /* Los pega al fondo (con un margen de 20px) */
+    left: 0;
+    width: 100%;            /* Ocupa todo el ancho para poder centrar los botones */
+    text-align: center;
+}
+
+
+button {
+    color: white;
+    margin-top: 10%;
+    border: 2px solid #AA0000ff;
+    border-radius: 5px;
+    background-color: #AA0000ff;
+    height: 30px; 
+    width: 200px;
+}
+
+button:hover {
+    background-color: #D40000ff;
+    border-color: #D40000ff;
+}
+
+#shi {
+    cursor: pointer;
 }
