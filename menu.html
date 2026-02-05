@@ -4,8 +4,28 @@
     <!-- Required meta tags for proper rendering and touch zooming -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    </script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
 <body>
-    <h1> heyo</h1>
+    
+    <div id="tourOverlay" class="overlay">
+    <div class="spotlight" id="spotlight"></div>
+    <div class="character-container" id="character">
+        <img src="yo.png" alt="Guía" style="width: 150px;"> <div class="dialogue-box">
+            <p>¡Hola! Este es el sector que te quería explicar. ¿Ves cómo brilla?</p>
+            <button onclick="closeOverlay()">Entendido</button>
+        </div>
+    </div>
+</div> 
+
+
+    <div id="card-home" class="card-home">
+        <h1>Nos vemos el 15 de febrero UwU</h1>
+        <p>Pero aun puedes interactuar con la pagina uwu, si necesitas ayuda, llamame
+        <span class="highlight-trigger" onclick="iniciarAyuda()"> AQUI </span>
+        (se que no necesitas ayuda pero si quiero que me necesites)</p>
+    <button>Agenda tu cita</button>
+    <button>Relationship wrapped</button>
+    <button>Trivia</button>
+    <button>Musiquita</button>
+    <script src="script.js"></script>
 </body>

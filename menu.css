@@ -1,0 +1,135 @@
+body {
+    height: 100vh;
+    position: relative;
+    background-image: url(v-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color:#AA0000ff;
+    font-size: 40px;
+    margin: auto;
+    margin: 20px;
+}
+
+p {
+    margin-bottom: 5%;
+}
+img {
+    margin-left: 15%;
+    max-height: 300px;
+}
+
+#card-home {
+    position: absolute;
+    top: 50%;        
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    height: 30vw;
+    width: 30%;
+    padding: 20px;
+
+    border: 5px solid #D40000ff;
+    border-radius: 10px;
+    background-color: #FFAAAAff;
+    margin: auto;
+    display: table;
+    box-shadow: 5px 5px 5px 2px red;
+}
+
+.container-buttons {
+   position: absolute;
+    bottom: auto;           
+    width: 100%;            
+    text-align: center;
+    margin-bottom: 0;
+}
+.overlay {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7); /* Oscurece el fondo */
+  z-index: 1000;
+}
+
+/* El "brillo" o resaltado */
+.spotlight {
+  position: fixed;
+  width: 200px;  /* Ajustable según el área */
+  height: 100px;
+  border-radius: 10px;
+  /* El truco: una sombra enorme que oscurece el resto */
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5), 0 0 20px 5px white;
+  pointer-events: none; /* Para que puedas clickear a través si es necesario */
+}
+
+/* Libertad total para el personaje */
+.character-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease; /* Para que se mueva fluido */
+}
+
+.dialogue-box {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 250px;
+  position: relative;
+}
+
+.highlight-trigger {
+    color: #AA0000;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer; /* Hace que aparezca la manito */
+    transition: all 0.3s;
+}
+
+.highlight-trigger:hover {
+    text-shadow: 0 0 10px rgba(170, 0, 0, 0.5);
+    transform: scale(1.1);
+    display: inline-block;
+}
+
+/* Para que la palabra resalte cuando el overlay esté activo */
+.highlight-active {
+    position: relative;
+    z-index: 1001; /* Por encima del overlay oscuro */
+    background: white;
+    padding: 0 5px;
+    border-radius: 3px;
+    color: black;
+}
+button {
+    display: block;
+    margin: 20px auto;
+    color: white;
+    margin-top: 3%;
+    border: 2px solid #AA0000ff;
+    border-radius: 5px;
+    background-color: #AA0000ff;
+    height: 40px; 
+    width: 80%;
+    box-shadow: 5px 5px 5px 2px rgb(243, 178, 208);
+}
+
+button:hover {
+    background-color: #D40000ff;
+    border-color: #D40000ff;
+}

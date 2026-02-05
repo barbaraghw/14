@@ -1,6 +1,10 @@
 body {
     height: 100vh;
     position: relative;
+    background-image: url(v-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 * {
@@ -36,6 +40,7 @@ img {
     background-color: #FFAAAAff;
     margin: auto;
     display: table;
+    box-shadow: 5px 5px 5px 2px red;
 }
 
 .container-buttons {
@@ -55,6 +60,7 @@ button {
     background-color: #AA0000ff;
     height: 30px; 
     width: 200px;
+    box-shadow: 5px 5px 5px 2px rgb(243, 178, 208);
 }
 
 button:hover {

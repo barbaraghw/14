@@ -54,3 +54,43 @@ target.addEventListener('click', () => {
     */
 });
 
+/*overlay*/
+/* 1. Función que agrupa los pasos del tour */
+function iniciarAyuda() {
+    // Aquí puedes elegir qué elemento resaltar primero
+    // Ejemplo: resaltamos la palabra "AQUI" o un botón
+    moverTour('h1', '¡Hola! Soy tu guía. Estoy aquí para explicarte cómo funciona todo.');
+}
+
+/* 2. La función dinámica (se queda igual, pero asegúrate de que esté definida) */
+function moverTour(selector, mensaje) {
+    const target = document.querySelector(selector);
+    const spotlight = document.getElementById('spotlight');
+    const character = document.getElementById('character');
+    const dialogue = document.querySelector('.dialogue-box p');
+    const overlay = document.getElementById('tourOverlay');
+
+    if (!target) return;
+
+    overlay.style.display = 'block';
+
+    const rect = target.getBoundingClientRect();
+
+    // Posicionamos el spotlight
+    spotlight.style.top = `${rect.top - 10}px`;
+    spotlight.style.left = `${rect.left - 10}px`;
+    spotlight.style.width = `${rect.width + 20}px`;
+    spotlight.style.height = `${rect.height + 20}px`;
+
+    // Cambiamos el texto
+    dialogue.innerText = mensaje;
+
+    // Posicionamos al personaje (Libertad total)
+    // Usamos window.scrollY por si el usuario ha bajado en la página
+    character.style.top = `${rect.bottom + window.scrollY + 20}px`;
+    character.style.left = `${rect.left}px`;
+}
+
+function closeOverlay() {
+    document.getElementById('tourOverlay').style.display = 'none';
+}
