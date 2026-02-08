@@ -84,6 +84,12 @@ img {
   transition: all 0.3s ease; /* Para que se mueva fluido */
 }
 
+#character img {
+    transition: opacity 0.3s ease;
+    width: 100%;
+    height: auto;
+}
+
 .dialogue-box {
   background: white;
   padding: 15px;

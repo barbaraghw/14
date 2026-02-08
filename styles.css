@@ -1,10 +1,11 @@
+/* --- Estilos base existentes --- */
 body {
     height: 100vh;
     position: relative;
     background-image: url(v-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-
+    overflow: hidden; /* Evita scrolls raros durante el tour */
 }
 
 * {
@@ -15,63 +16,121 @@ body {
 
 h1 {
     text-align: center;
-    color:#AA0000ff;
-    font-size: 40px;
-    margin: auto;
+    color: #AA0000ff;
+    font-size: clamp(24px, 5vw, 40px); /* Tamaño fluido */
     margin: 20px;
 }
 
 img {
-    margin-left: 15%;
-    max-height: 300px;
+    display: block;
+    margin: 0 auto;
+    max-height: 30vh; /* Altura relativa a la pantalla */
 }
 
 #card-home {
     position: absolute;
-    top: 50%;        
-    left: 50%;  
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    height: 30vw;
-    width: 30%;
+    min-height: 40vh; /* Cambiado de 30vw para mejor control */
+    width: clamp(300px, 40%, 600px); /* Responsive: no muy chico, no muy grande */
     padding: 20px;
-
     border: 5px solid #D40000ff;
     border-radius: 10px;
     background-color: #FFAAAAff;
-    margin: auto;
-    display: table;
-    box-shadow: 5px 5px 5px 2px red;
+    box-shadow: 5px 5px 15px rgba(255, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.container-buttons {
-   position: absolute;
-    bottom: auto;           /* Los pega al fondo (con un margen de 20px) */
+/* --- ESTILOS DEL OVERLAY (DINÁMICO Y RESPONSIVE) --- */
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;            /* Ocupa todo el ancho para poder centrar los botones */
-    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
 }
 
+.spotlight {
+    position: fixed;
+    z-index: 1001;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.75); /* Crea la oscuridad */
+    border-radius: 10px;
+    pointer-events: none; /* PERMITE CLICKEAR LO QUE ESTÁ ADENTRO */
+    transition: all 0.4s ease-in-out;
+}
+
+.character-container {
+    position: fixed;
+    z-index: 1002;
+    width: clamp(200px, 25vw, 300px); /* Ancho responsive */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.4s ease-out;
+}
+
+.character-container img {
+    width: 100%;
+    height: auto;
+    max-height: 25vh;
+    margin: 0;
+}
+
+.dialogue-box {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    border: 3px solid #AA0000;
+    margin-top: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.dialogue-box p {
+    font-size: clamp(14px, 1.2vw, 18px);
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.dialogue-box button {
+    width: auto;
+    height: auto;
+    padding: 5px 15px;
+    margin-top: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* --- Botones y otros --- */
+.container-buttons {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
 
 button {
     color: white;
-    margin-top: 10%;
+    margin: 10px auto;
     border: 2px solid #AA0000ff;
     border-radius: 5px;
     background-color: #AA0000ff;
-    height: 30px; 
-    width: 200px;
-    box-shadow: 5px 5px 5px 2px rgb(243, 178, 208);
-}
-
-button:hover {
-    background-color: #D40000ff;
-    border-color: #D40000ff;
-}
-
-#shi {
+    height: 35px;
+    width: 80%;
+    max-width: 200px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
     cursor: pointer;
-    transition: all 0.3s ease;
-    transform-origin: center;
-    display: inline-block;
 }
 
+.highlight-trigger {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #D40000;
+}
