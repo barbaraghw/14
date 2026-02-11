@@ -1,0 +1,65 @@
+/* --- Estilos base existentes --- */
+body {
+    height: 100vh;
+    position: relative;
+    background-image: url(v-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden; /* Evita scrolls raros durante el tour */
+}
+
+.header {
+    width: 90%;
+    background-color: #FFAAAAff;
+    text-align: center;
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 3%;
+}
+.title {
+    display: inline-block;
+}
+
+h1 {
+    color: rgb(215, 2, 2);
+}
+
+h3 {
+    color: #AA0000ff;
+    font-family: 'Borel';
+}
+.container-cards {
+    width: 90%;
+    height: 70%;;
+    margin: 4%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+p {
+    font-family: 'sans-serif';
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el .safe-score al fondo */
+    min-height: 200px; /* O el alto que prefieras */
+    padding: 20px;
+    background-color: #FFD5D5ff;
+    border-radius: 15px;
+    border: 4px dotted red;
+}
+.bottom {
+    margin-top: auto;
+    font-weight: bold;
+    padding-top: 10px;
+    background-color: #FF8080ff;
+    text-align: center;
+    height: 10%;
+    border-radius: 15px;
+    color: #AA0000ff;
+}

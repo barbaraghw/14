@@ -46,7 +46,6 @@ const pasosTour = [
     { selector: 'h1', mensaje: 'HOLAA gracias por clickearme. Te voy a hacer una guia a la pagina aunque es obvio todo JSJASJ. Espero que te guste aunque sea humilde y recuerda que no tiene base de datos asi que la informacion importante (la agenda) me la tienes que decir jeje' },
     { selector: '#agenda', mensaje: 'Aqui puedes agendar tu cita que por default sera el domingo 15 de diciembre, sujeto a cambios (no la cambies ya me ilusione) y algunas ideas de cita para ver que podemos hacer, acepto propuestas.' },
     { selector: '#wrapped', mensaje: 'Hice una recopilacion de estadisticas de nuestra relacion desde el 14 de febrero hasta hoy jiji'},
-    { selector: '#trivia', mensaje: 'Desde aqui podras encontrar como una trivia silly de cositas sobre nosotros, comparteme tus resultados <3', imagen: 'yomalo.png' },
     { selector: '#musica', mensaje: 'Creo que nunca nos hemos dedicado una cancion asi que aprovechare para recopilarte canciones que me recuerdan a ti (no porque sean tu sino mas como me siento contigo uwu)' },
     { selector: '#card-home', mensaje: 'Eso seria el fin del tutorial, espero que lo disfrutes este pequeño detallito, MUACK' }
 ];
