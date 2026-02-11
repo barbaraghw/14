@@ -24,7 +24,30 @@ h1 {
 img {
     display: block;
     margin: 0 auto;
-    max-height: 30vh; /* Altura relativa a la pantalla */
+    max-height: 50vh; /* Altura relativa a la pantalla */
+    
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacio entre las dos imágenes */
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.wrapped-img {
+    max-width: 100%; /* Si hay una, ocupa lo que necesite */
+    height: 50%;   /* Altura fija para que no se vea desordenado */
+    object-fit: cover;
+    border-radius: 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* Cuando hay dos imágenes, ajustamos su ancho */
+.image-container.double-img .wrapped-img {
+    width: 45%; 
 }
 
 #card-home {
@@ -131,6 +154,7 @@ button:hover {
     background-color: #D40000ff;
     border-color: #D40000ff;
 }
+
 .highlight-trigger {
     cursor: pointer;
     font-weight: bold;

@@ -3,8 +3,18 @@ body {
     position: relative;
     background: linear-gradient(#800000ff, #AA0000ff);
     background-repeat: no-repeat;
-
+    font-family: 'Borel';
 }
+
+p {
+    font-family: 'Montserrat';
+}
+.gravitas-one-regular {
+  font-family: "Gravitas One", serif;
+  font-weight: 10;
+  font-style: normal;
+}
+
 
 h1 {
     text-align: center;
@@ -32,6 +42,7 @@ h2 {
     margin: 1%;
     text-align: center;
     gap: 20px;
+    margin-top: 4%;
 }
 
 .music-card {
@@ -50,6 +61,7 @@ h2 {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    font-size: 15px;
     
 }
 
@@ -94,7 +106,7 @@ h2 {
 }
 
 .music-card:hover .expand-text {
-    max-height: 200px; /* Un valor lo suficientemente grande para el texto */
+    max-height: 100px; /* Un valor lo suficientemente grande para el texto */
     opacity: 1;
     margin-top: 10px;
 }

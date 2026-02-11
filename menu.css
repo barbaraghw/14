@@ -133,6 +133,7 @@ button {
     height: 40px; 
     width: 80%;
     box-shadow: 5px 5px 5px 2px rgb(243, 178, 208);
+    cursor: pointer;
 }
 
 button:hover {
